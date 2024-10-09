@@ -1,0 +1,111 @@
+@import "../mixins";
+.gallery {
+  &-container {
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+  background-color: var(--newWhite);
+  &-title {
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    >:not(:first-child) {
+      margin-top: rem(8);
+    }
+  }
+  &-swiper {
+    margin-top: rem(40);
+    .swiper {
+      position: relative;
+      &-wrapper {
+        height: 85vh;
+      }
+      &-slide {
+        img {
+          width: 100%;
+          object-fit: cover;
+          height: 85vh;
+        }
+      }
+      &-button {
+        &-disabled {
+          border: 1px solid #FEFAEE;
+          background-color: transparent !important;
+          opacity: 1;
+          path {
+            fill: white;
+          }
+        }
+        &-prev, &-next {
+          position: static;
+          width: rem(56);
+          height: rem(56);
+          background-color: var(--white);
+          border-radius: 50%;
+          color: var(--black);
+          mix-blend-mode: difference;
+          margin: 0;
+          &::after {
+            content: '';
+          }
+        }
+      }
+      &-navigation {
+        display: flex;
+        >:not(:last-child){
+          margin-right: rem(22);
+        }
+        margin-bottom: rem(56);
+      }
+    }
+  }
+  &-block {
+    position: absolute;
+    right: rem(56);
+    bottom: rem(96);
+    width: rem(368);
+    border-radius: rem(12);
+    padding: rem(24);
+    background-color: rgba(23, 23, 23, 0.6);
+    z-index: 100;
+    backdrop-filter: blur(4.5px);
+    >:last-child {
+      margin-top: rem(24);
+    }
+    &__group {
+      >:first-child {
+        margin-bottom:rem(15);
+      }
+    }
+    &__type {
+      width: fit-content;
+      border-radius: rem(24);
+      padding: rem(4) rem(8);
+      background-color: rgba(252, 214, 139, 1);
+      span {
+        line-height: remF(14);
+        font-size: remF(16);
+        color: #9C356D;
+        font-weight: 500;
+      }
+    }
+    &__name {
+      margin-top: rem(16);
+      font-size: remF(32);
+      line-height: remF(32);
+      font-weight: 500;
+      font-style: italic;
+    }
+  }
+  [data-tab] {
+    display: none;
+  }
+
+  [data-tab].active {
+    display: block;
+  }
+[data-tab-btn] {
+  display: none;
+}
+}

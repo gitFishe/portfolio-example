@@ -1,0 +1,1 @@
+function sPromo(o){o.forEach(o=>{})}document.addEventListener("DOMContentLoaded",function(){document.querySelector(".promo")&&sPromo(document.querySelectorAll(".promo"))});

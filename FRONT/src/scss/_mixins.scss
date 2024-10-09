@@ -1,0 +1,24 @@
+$base-value: 16;
+
+@function rem($size) {
+  $remSize: $size / $base-value;
+
+  @return #{$remSize}rem;
+}
+@function remF($size) {
+  $remSize: $size / $base-value;
+  $minSize: if($size - 4 < 12, 12, $size - 4);
+  $minSize: if($size > 18, 12, $minSize);
+
+  @return Max(#{$remSize}rem, #{$minSize}px);
+}
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url('../fonts/#{$url}.woff2') format("woff2");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+

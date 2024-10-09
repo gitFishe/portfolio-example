@@ -1,0 +1,66 @@
+@import "../mixins";
+.logo {
+  height: rem(585);
+  background: rgb(255,250,239);
+  background: linear-gradient(356deg, rgba(255,250,239,1) 21%, rgba(252,214,139,1) 35%, rgba(249,120,76,1) 48%, rgba(156,53,109,1) 60%, rgba(23,23,23,1) 74%);
+  &-container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+  &-text {
+    white-space: nowrap;
+    color: var(--light);
+    animation: text 20s infinite linear;
+  }
+  .line {
+    margin: auto;
+    display: flex;
+    &-wrap {
+      display: flex;
+      overflow: hidden;
+      user-select: none;
+      >:not(:last-child) {
+        margin-right: rem(20);
+      }
+      border-top: 2px solid var(--light);
+      border-bottom: 2px solid var(--light);
+    }
+    &-block {
+      flex-shrink: 0;
+      display: flex;
+      >:not(:last-child) {
+        margin-right: rem(20);
+      }
+      justify-content: space-around;
+      min-width: 100%;
+      animation: scroll 10s linear infinite;
+    }
+  }
+  .item {
+    flex: 0 0 auto;
+    width: 100%;
+    margin: rem(20) 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: var(--light);
+
+    font-size: remF(25);
+    font-family: "Kode Mono", monospace !important;
+
+  }
+
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 20px));
+    }
+  }
+}

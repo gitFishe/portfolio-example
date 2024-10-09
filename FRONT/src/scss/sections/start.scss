@@ -1,0 +1,31 @@
+@import "../mixins";
+
+.start{
+  width: 100%;
+  height: rem(606);
+  padding-top: rem(96);
+  &-content {
+    max-width: 76.5%;
+  }
+  &-hello {
+    display: block;
+    margin-bottom: rem(20);
+    font-size: remF(20);
+    line-height: remF(24);
+    font-weight: 700;
+  }
+  &-block {
+    margin-top: rem(50);
+    display: flex;
+    >:not(:last-child) {
+      margin-right: rem(22);
+    }
+  }
+  &-title {
+    background: rgb(255,250,239);
+    background: linear-gradient(174deg, rgba(255,250,239,1) 0%, rgba(252,214,139,1) 20%, rgba(249,120,76,1) 40%, rgba(156,53,109,1) 60%, rgba(23,23,23,1) 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+  

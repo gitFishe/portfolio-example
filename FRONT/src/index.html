@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Blackbook</title>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="global-wrapper">
+    <header class="header">
+      <a href="https://blackbook.dev/" class="logo" target="_blank">Blackbook</a>
+    </header>
+    <div class="main">
+      <div class="mbox">
+        <div class="head-line">
+          <h1>Project name 👨&zwj;💻 </h1>
+        </div>
+        <div class="wrap">
+          <ol class="box">
+            <li>
+                <a href="main.html">Main</a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            background-color: #fafafa;
+            color: #212121;
+            margin: 0;
+        }
+
+        .head-line {
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .head-line h1 {
+            margin: 0 auto;
+            padding: 20px 10px;
+            max-width: 1280px;
+            min-height: 68px;
+            box-sizing: border-box;
+            color: #000;
+            font-size: 24px;
+            word-wrap: break-word;
+        }
+
+        .wrap {
+            padding: 10px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h5 {
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            max-width: 1280px;
+            margin: 30px 0 10px;
+            padding: 0 20px;
+            background-color: #fafafa;
+            /* font-family: $ ff-heronew-regular; */
+            font-size: 30px;
+        }
+
+        h5:before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 1280px;
+            background-color: #eaeaea;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        a {
+            color: #212121;
+            text-decoration: none;
+        }
+
+        a.not-ready {
+            opacity: .5;
+        }
+        @media (min-width: 992px) {
+            a:hover {
+                color: #212121;
+                text-decoration: underline;
+            }
+        }
+        .box {
+            padding: 20px 40px;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 1280px;
+            border-radius: 8px;
+            box-sizing: border-box;
+            border: 1px solid #eaeaea;
+            background-color: #fff;
+            text-align: left;
+            -webkit-columns: 210px auto;
+            columns: 210px auto;
+            -webkit-column-gap: 50px;
+            column-gap: 50px;
+            -webkit-column-rule: 1px solid #f2f2f2;
+            column-rule: 1px solid #f2f2f2;
+        }
+
+        ol,
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            word-wrap: break-word;
+            display: inline-block;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px 15px 10px 40px;
+            position: relative;
+        }
+
+        li a::before {
+            position: absolute;
+            display: inline-block;
+        }
+
+        ol {
+            counter-reset: item;
+        }
+
+        ol li {
+            counter-increment: item;
+        }
+
+        ol li a::before {
+            content: counter(item, decimal-leading-zero) ".";
+            top: 13px;
+            left: 0;
+            color: #fff;
+            font-size: 12px;
+            z-index: 10;
+        }
+
+        ol li a:visited::before {
+            color: #fff;
+        }
+
+        ul li a::before {
+            content: '';
+            top: 18px;
+            left: 8px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+
+        ul li a:visited::before {
+            background-color: #fff;
+        }
+        .global-wrapper {
+            padding-top: 0;
+        }
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #fafafa!important;
+            text-transform: uppercase;
+            text-decoration: none!important;
+        }
+        body {
+            background-color: #0b0b0b;
+            color: #fff;
+        }
+
+        .head-line {
+            background-color: transparent;
+        }
+
+        .head-line h1 {
+            color: #fff;
+            font-size: 31px;
+        }
+        .box {
+            border-radius: 0;
+            background-color: transparent;
+        }
+
+        ol li a:visited::before {
+            color: #fff;
+        }
+
+        ol li a::before {
+            color: #fff;
+            font-weight: 600;
+        }
+        .box a {
+            color: #fff;
+            text-decoration: underline !important;
+        }
+        @media (min-width: 992px) {
+            .box a:hover {
+                color: #ccc;
+            }
+        }
+        .header {
+            height: 69px;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid #fff;
+        }
+        .main {
+            padding-top: 100px;
+        }
+
+    </style>
+  </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+@import "mixins";
+
+.mobile {
+  &-hide {
+    @media (max-width: 768px) {
+      display: none !important;
+    }
+  }
+
+  &-show {
+    @media (min-width: 769px) {
+      display: none !important;
+    }
+  }
+}
+.colored {
+  >* {
+    color: #F9784C !important;
+    font-size: remF(20);
+    line-height: remF(24);
+    font-weight: 700;
+  }
+}
+.description {
+  >* {
+    color: var(--newBlack);
+    font-size: remF(18);
+    line-height: remF(25.2);
+  }
+  &--light {
+    >* {
+      color: var(--light);
+      font-size: remF(16);
+      line-height: remF(22.4);
+    }
+  }
+}
